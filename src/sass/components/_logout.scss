@@ -1,0 +1,25 @@
+.logout {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &__text {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 0.2s ease-in-out;
+
+    &:hover {
+      border-bottom-color: #fff;
+    }
+  }
+
+  &__icon {
+    fill: #fff;
+  }
+}

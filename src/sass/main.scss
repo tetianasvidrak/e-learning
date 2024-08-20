@@ -3,4 +3,11 @@
 @import "base/typography";
 @import "base/variables";
 
+@import "components/loader";
 @import "components/sign-in-form";
+@import "components/header";
+@import "components/logo";
+@import "components/logout";
+@import "components/container";
+
+@import "pages/signin-page";

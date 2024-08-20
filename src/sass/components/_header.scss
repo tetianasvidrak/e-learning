@@ -1,0 +1,29 @@
+.header {
+  background-color: $color-primary;
+  padding: 1rem 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    gap: 3rem;
+    margin-left: 15rem;
+  }
+
+  &__link {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 0.2s ease-in-out;
+
+    &:hover {
+      border-bottom-color: #fff;
+    }
+  }
+}
