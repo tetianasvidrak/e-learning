@@ -16,6 +16,15 @@ const initialState = {
 const authSlice = createSlice({
   name: "auth",
   initialState,
+  reducers: {
+    logout(state) {
+      state.token = null;
+      state.user = null;
+      state.isLoggedIn = false;
+      state.loading = "idle";
+      state.error = null;
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(login.pending, (state) => {
       state.loading = "pending";
@@ -40,6 +49,8 @@ const persistConfig = {
   key: "authentication",
   storage,
 };
+
+export const { logout } = authSlice.actions;
 
 export const persistedAuthReducer = persistReducer(
   persistConfig,

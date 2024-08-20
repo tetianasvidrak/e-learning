@@ -21,7 +21,7 @@ export const App = () => {
       path: "/",
       element: (
         <ProtectedRoute role="all">
-          <Layout role={user.role} />
+          <Layout role={user?.role} />
         </ProtectedRoute>
       ),
       children: [
