@@ -1,0 +1,16 @@
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &__icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  &__text {
+    color: #fff;
+    font-size: 3rem;
+    text-transform: lowercase;
+  }
+}

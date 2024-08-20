@@ -1,7 +1,11 @@
 import { Field, Form, Formik } from "formik";
 import * as Yup from "yup";
+import { useDispatch } from "react-redux";
+import * as authOperations from "../../redux/auth/auth-operations";
 
-const SignIn = () => {
+const SignInForm = () => {
+  const dispatch = useDispatch();
+
   const validationSchema = Yup.object().shape({
     email: Yup.string().email("Invalid email").required("Email is required"),
     password: Yup.string()
@@ -17,7 +21,7 @@ const SignIn = () => {
           password: "",
         }}
         onSubmit={(values) => {
-          console.log(values);
+          dispatch(authOperations.login(values));
         }}
         validationSchema={validationSchema}
       >
@@ -74,16 +78,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
-
-{
-  /* <fieldset className="form__field">
-          <legend className="form__field-name">Email</legend>
-          <input className="form__email" type="email" />
-        </fieldset>
-        <fieldset className="form__field">
-          <legend className="form__field-name">Password</legend>
-          <input className="form__password" type="password" />
-        </fieldset>
-        <button className="form__btn">Submit</button> */
-}
+export default SignInForm;
